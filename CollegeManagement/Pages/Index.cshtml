@@ -1,26 +1,5 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1 class="display-2">Welcome to College Monitor</h1>
+<img src = "/images/college.jpg"/>
 </div>
-@* 
-print numbers from 1 to 1000
-multiplication table for 45 
-*@
-
-@for (int i = 1; i <= 1000; i++){
-       <span>@i,</span>
-}
-<br>
-<br>
-<h2 style="color: red;">Multliplication table of 45</h2>
-  @for (int i = 1; i <= 10; i++)
-    {
-        int result = 45 * i;
-            <p>@($"{45} * {i} = {result}") </p>
-    }        
