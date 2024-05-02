@@ -1,0 +1,42 @@
+@page
+@model CollegeManagement.Pages_Sessions.CreateModel
+
+
+
+<h4>Session</h4>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Session.Title" class="control-label"></label>
+                <input asp-for="Session.Title" class="form-control" />
+                <span asp-validation-for="Session.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Session.Details" class="control-label"></label>
+                <input asp-for="Session.Details" class="form-control" />
+                <span asp-validation-for="Session.Details" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Session.Start" class="control-label"></label>
+                <input asp-for="Session.Start" class="form-control" />
+                <span asp-validation-for="Session.Start" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Session.DurationInHours" class="control-label"></label>
+                <input asp-for="Session.DurationInHours" class="form-control" />
+                <span asp-validation-for="Session.DurationInHours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+

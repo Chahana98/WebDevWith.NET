@@ -1,0 +1,23 @@
+
+@page "/Courses/edit/{id:int}"
+@model EditCourseModel
+
+<h2>Update Course Entry</h2>
+
+<form method="post">
+  <input type="hidden" asp-for="Course.Id" />
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input asp-for="Course.Name" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">TextBook</label>
+    <input asp-for="Course.TextBook" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">CreditHrs</label>
+    <input asp-for="Course.CreditHrs" class="form-control">
+  </div>
+  
+  <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i>Submit</button>
+</form>
