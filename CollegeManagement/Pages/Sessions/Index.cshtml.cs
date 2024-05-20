@@ -21,7 +21,7 @@ namespace CollegeManagement.Pages_Sessions
 
         public async Task OnGetAsync()
         {
-            Session = await _context.Sessions.ToListAsync();
+            Session = await _context.Sessions.Include(x => x.Course).ToListAsync();
         }
     }
 }

@@ -29,6 +29,12 @@
                 <input asp-for="Session.DurationInHours" class="form-control" />
                 <span asp-validation-for="Session.DurationInHours" class="text-danger"></span>
             </div>
+             <div class="form-group">
+                <label class="control-label">Course</label>
+                <select asp-for="Session.CourseId" asp-items="Model.Courses" class="form-control">
+                    <option selected value="@null">Select Course..</option>
+                </select>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

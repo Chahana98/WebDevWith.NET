@@ -19,11 +19,16 @@ namespace CollegeManagement.Pages_Sessions
 
         public IActionResult OnGet()
         {
+            Courses= _context.Courses
+            .Select(x => new SelectListItem { Text=x.Name, Value=x.Id.ToString() })
+            .ToList();
             return Page();
         }
 
         [BindProperty]
         public Session Session { get; set; } = default!;
+
+        public List<SelectListItem> Courses {get; set;}
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
