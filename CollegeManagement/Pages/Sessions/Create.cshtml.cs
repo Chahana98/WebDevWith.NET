@@ -18,10 +18,12 @@ namespace CollegeManagement.Pages_Sessions
         }
 
         public IActionResult OnGet()
+            
         {
-            Courses= _context.Courses
-            .Select(x => new SelectListItem { Text=x.Name, Value=x.Id.ToString() })
+            Courses = _context.Courses
+            .Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() })
             .ToList();
+
             return Page();
         }
 

@@ -7,9 +7,13 @@ namespace CollegeManagement.Pages;
 public class CoursesModel : PageModel
 {
     public List<Course> Courses {get; set;}
-    public void OnGet()
+    public async Task OnGet()
     {
-        CollegeDbContext db= new();
-        Courses = db.Courses.ToList();
+        // CollegeDbContext db= new();
+        // Courses = db.Courses.ToList();
+
+        // HTTP call
+        HttpClient http = new HttpClient();
+        Courses = await http.GetFromJsonAsync<List<Course>>("http://localhost:5261/courses");
     }
 }
